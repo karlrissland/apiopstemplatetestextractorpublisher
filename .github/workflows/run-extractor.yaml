@@ -57,6 +57,7 @@ jobs:
           write-information "API_Management_Service_Output_Folder_Path: ${{env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH}}"
           write-information "API_Specification_Format:  ${{env.API_SPECIFICATION_FORMAT}}"
           write-information "Configuration_YAML_PATH:  ${{env.CONFIGURATION_YAML_PATH}}"
+          write-information "Vars Config Yaml Path: ${{GITHUB.WORKSPACE}}/${{vars.CONFIGURATION_YAML_PATH}}
           
           Set-StrictMode -Version Latest
           $ErrorActionPreference = "Stop"
