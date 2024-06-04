@@ -47,6 +47,17 @@ jobs:
           API_SPECIFICATION_FORMAT: ${{ github.event.inputs.API_SPECIFICATION_FORMAT }} 
           CONFIGURATION_YAML_PATH:  ${{ GITHUB.WORKSPACE }}/${{ github.event.inputs.CONFIGURATION_YAML_PATH }}
         run: |
+          write-information "Azure_Client_ID: ${{env.}}"
+          write-information "Azure_Client_Secret:  ${{env.}}"
+          write-information "Azure_Tenant_Id:  ${{env.}}"
+          write-information "Azure_Subscription_Id:  ${{env.}}"
+          write-information "Azure_Resource_Group_Name:  ${{env.}}"
+          write-information "API_Management_Service_Output_Folder_Path: ${{env.}}"
+          write-information "API_Specification_Format:  ${{env.}}"
+          write-information "Configuration_YAML_PATH:  ${{env.}}"
+          
+
+        
           Set-StrictMode -Version Latest
           $ErrorActionPreference = "Stop"
           $VerbosePreference = "Continue"
