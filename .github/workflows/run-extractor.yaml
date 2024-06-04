@@ -47,17 +47,16 @@ jobs:
           API_SPECIFICATION_FORMAT: ${{ github.event.inputs.API_SPECIFICATION_FORMAT }} 
           CONFIGURATION_YAML_PATH:  ${{ GITHUB.WORKSPACE }}/${{ github.event.inputs.CONFIGURATION_YAML_PATH }}
         run: |
-          write-information "Azure_Client_ID: ${{env.}}"
-          write-information "Azure_Client_Secret:  ${{env.}}"
-          write-information "Azure_Tenant_Id:  ${{env.}}"
-          write-information "Azure_Subscription_Id:  ${{env.}}"
-          write-information "Azure_Resource_Group_Name:  ${{env.}}"
-          write-information "API_Management_Service_Output_Folder_Path: ${{env.}}"
-          write-information "API_Specification_Format:  ${{env.}}"
-          write-information "Configuration_YAML_PATH:  ${{env.}}"
+          write-information "Azure_Client_ID: ${{env.AZURE_CLIENT_ID}}"
+          write-information "Azure_Client_Secret:  ${{env.AZURE_CLIENT_SECRET}}"
+          write-information "Azure_Tenant_Id:  ${{env.AZURE_TENANT_ID}}"
+          write-information "Azure_Subscription_Id:  ${{env.AZURE_SUBSCRIPTION_ID}}"
+          write-information "Azure_Resource_Group_Name:  ${{env.AZURE_RESOURCE_GROUP_NAME}}"
+          write-information "Azure_APIM_Service_Name" ${{env.API_MANAGEMENT_SERVICE_NAME}}"
+          write-information "API_Management_Service_Output_Folder_Path: ${{env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH}}"
+          write-information "API_Specification_Format:  ${{env.API_SPECIFICATION_FORMAT}}"
+          write-information "Configuration_YAML_PATH:  ${{env.CONFIGURATION_YAML_PATH}}"
           
-
-        
           Set-StrictMode -Version Latest
           $ErrorActionPreference = "Stop"
           $VerbosePreference = "Continue"
