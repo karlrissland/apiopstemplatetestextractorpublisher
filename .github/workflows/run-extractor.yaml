@@ -3,6 +3,10 @@ name: Run - Extractor
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: 'environment to extract from'
+        required: true
+        type: environment
       CONFIGURATION_YAML_PATH:
         description: 'Choose Wether to extract all Apis or extract apis listed an extraction configuration file'     
         required: true
@@ -26,7 +30,7 @@ env:
 jobs:
   extract:
     runs-on: ubuntu-latest
-    environment: dev # change this to match the dev environment created in settings 
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - uses: actions/checkout@v3
       
