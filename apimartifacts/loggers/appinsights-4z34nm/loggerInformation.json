@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "loggerType": "applicationInsights",
+    "credentials": {
+      "instrumentationKey": "{{appInsightsKeyDisplayName}}"
+    },
+    "isBuffered": true,
+    "resourceId": "/subscriptions/1680f467-523b-453d-9cc0-59ab9a7052b8/resourceGroups/proxypatpoc-ateg4pu-sharedprod/providers/Microsoft.Insights/components/appinsights-ateg4pu"
+  }
+}

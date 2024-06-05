@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "scope": "/subscriptions/1680f467-523b-453d-9cc0-59ab9a7052b8/resourceGroups/proxypatpoc-ateg4pu-sharedprod/providers/Microsoft.ApiManagement/service/apim-ateg4pu/products/unlimited",
+    "allowTracing": false,
+    "ownerId": "/subscriptions/1680f467-523b-453d-9cc0-59ab9a7052b8/resourceGroups/proxypatpoc-ateg4pu-sharedprod/providers/Microsoft.ApiManagement/service/apim-ateg4pu/users/1",
+    "state": "active"
+  }
+}
