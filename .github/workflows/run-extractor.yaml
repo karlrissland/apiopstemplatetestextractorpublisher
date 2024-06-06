@@ -147,10 +147,10 @@ jobs:
       - name: publish artifact
         uses: actions/upload-artifact@v2
         env:
-          API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts  # change this to the artifacts folder  
+          API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: ${{ GITHUB.WORKSPACE }}/src/apis   # change this to the artifacts folder  
         with:
           name: artifacts-from-portal
-          path: ${{ GITHUB.WORKSPACE }}/${{ env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}    
+          path: ${{ env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}    
           
   create-pull-request:
     needs: extract
@@ -164,7 +164,7 @@ jobs:
           API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH: apimartifacts  # change this to the artifacts folder  
         with:
           name: artifacts-from-portal
-          path: "${{ GITHUB.WORKSPACE }}/${{ env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}"
+          path: "${{ env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH }}"
 
       - name: Create artifacts pull request
         uses: peter-evans/create-pull-request@v3
