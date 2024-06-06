@@ -1,8 +1,6 @@
  apiNames:
   - echo-api
 
- versionSetNames: 
-
  backendNames: [ignore]
 
  diagnosticNames: [ignore]
