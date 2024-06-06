@@ -1,5 +1,5 @@
  apiNames:
-  - echo-api
+  - demo-conference-api
 
  backendNames: [ignore]
 
