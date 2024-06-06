@@ -81,6 +81,11 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Running extractor failed."}
 
           Write-Information "Execution complete."
+
+          Write-Information "Cleaning up..."
+          Remove-Item -Path "${{env.API_MANAGEMENT_SERVICE_OUTPUT_FOLDER_PATH}}\policy.xml" -Force
+          Write-Information "Cleaned up..."
+
         shell: pwsh
 
       - name: Push Changes and Create Pull Request
