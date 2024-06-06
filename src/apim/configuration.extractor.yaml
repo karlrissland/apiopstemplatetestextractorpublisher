@@ -1,6 +1,8 @@
  apiNames:
  - demo-conference-api
 
+ versionSetNames:
+
  backendNames: [ignore]
 
  diagnosticNames: [ignore]
