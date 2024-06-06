@@ -1,4 +1,5 @@
  apiNames:
+ - demo-conference-api
 
  backendNames: [ignore]
 
