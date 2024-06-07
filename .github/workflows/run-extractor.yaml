@@ -93,6 +93,8 @@ jobs:
           git add .
           git commit -m "updated apis from apim"
           git push --set-upstream origin apiops-extract 
+
+          gh pr create --title "Updated APIs" --body "Extracted APIs" --base main
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
